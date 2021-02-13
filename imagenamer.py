@@ -16,12 +16,11 @@ for char in old_name:
 
 try:
   for number, image in enumerate(images, 1):
-    concat_name = ((new_name + "{0}").format(number)) + ".JPG"
-    with_path = (image.split("\\")[::-1])
+    concat_name = ((new_name + "{0}").format(number)) + ".JPG"  # name img with enumerator
+    with_path = (image.split("\\")[::-1])                       
     with_path[0] = concat_name
-    with_path = "\\".join((with_path[::-1]))
-    print(concat_name, with_path, image)
+    with_path = "\\".join((with_path[::-1]))                    # re-create full pahtname                    
+    print(concat_name, with_path, image)                        
     os.rename(image, with_path)
 except Exception as e:
   print("failure", e.__class__, e.with_traceback)
-# for image in images:
