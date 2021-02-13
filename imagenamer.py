@@ -19,7 +19,7 @@ try:
     concat_name = ((new_name + "{0}").format(number)) + ".JPG"  # name img with enumerator
     with_path = (image.split("\\")[::-1])                       
     with_path[0] = concat_name
-    with_path = "\\".join((with_path[::-1]))                    # re-create full pahtname                    
+    with_path = "\\".join((with_path[::-1]))                    # re-create full pathname                    
     print(concat_name, with_path, image)                        
     os.rename(image, with_path)
 except Exception as e:
