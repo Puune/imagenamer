@@ -2,9 +2,11 @@ import sys, glob, os, re
 
 #for arg in sys.argv:                             #help
 # print (arg)      
+# Usage: in terminal > python imagenamer.py '/path/to/file/matcher_until_start_of_numbers*'
 
 matcher = sys.argv[1]
 images = glob.glob(matcher)
+print(len(images))
 old_name = (images[0].split("\\")[::-1])[0]     #extract filename from pathname
 new_name = ""
 regex = "[0-9]"
